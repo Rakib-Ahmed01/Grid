@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        font-size: 20px;
+      }
+
+      .container {
+        width: 90vw;
+        height: 50vh;
+        padding: 10px;
+        margin: auto;
+        border: 2px solid #48cae4;
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(3, 1fr);
+        /* grid-template-columns: repeat(2, 1fr) 2fr; */
+        /* grid-template-rows: repeat(2, 200px); */
+        /* grid-column-gap: 10px;
+        grid-row-gap: 10px; */
+        grid-gap: 10px;
+      }
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        border-radius: 5px;
+      }
+
+      .item:nth-child(2n) {
+        background-color: deeppink;
+      }
+      .item:nth-child(2n + 1) {
+        background-color: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+    </div>
+  </body>
+</html>
